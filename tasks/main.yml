@@ -1,0 +1,10 @@
+---
+# tasks file for gorobchenkoa.telegraf_output_setup
+- name: Copy telegraf config for prometheus output
+  ansible.builtin.copy:
+    src: prometheus_config.conf
+    dest: /etc/telegraf/conf.d/prometheus_config.conf
+    mode: 0644
+    owner: telegraf
+    group: telegraf
+  notify: restartTelegraf

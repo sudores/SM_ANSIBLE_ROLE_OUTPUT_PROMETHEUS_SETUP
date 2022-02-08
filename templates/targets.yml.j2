@@ -1,0 +1,4 @@
+- targets:
+{% for i in group["Monitored"] %}
+  - {{ i }}:9126
+{% endfor %}
