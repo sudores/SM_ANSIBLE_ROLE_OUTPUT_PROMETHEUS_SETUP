@@ -3,7 +3,7 @@
 - name: Copy telegraf config for prometheus output
   ansible.builtin.copy:
     src: prometheus_config.conf
-    dest: /etc/telegraf/conf.d/prometheus_config.conf
+    dest: /etc/telegraf/telegraf.d/prometheus_config.conf
     mode: 0644
     owner: telegraf
     group: telegraf
